@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
  
 use App\User;
 use Illuminate\Http\Request;
- 
+use Illuminate\Support\Facades\Validator;
+
 class PassportController extends Controller
 {
     /**
@@ -15,13 +16,16 @@ class PassportController extends Controller
      */
     public function register(Request $request)
     {
-        // $this->validate($request, [
-        //     'name' => 'required|min:3',
-        //     'email' => 'required|email|unique:users',
-        //     'password' => 'required|min:6',
-        // ]);
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|min:3',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6',
+        ]);
         
-        
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->messages()->first()], 400); // impossivel fazer isso retornar o status code certo
+        }
+
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -29,10 +33,9 @@ class PassportController extends Controller
         ]);
  
         $token = $user->createToken('TutsForWeb')->accessToken;
-        dd($token);
         return response()->json(['token' => $token], 201);
     }
- 
+
     /**
      * Handles Login Request
      *
