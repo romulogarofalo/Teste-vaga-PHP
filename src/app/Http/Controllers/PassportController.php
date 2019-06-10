@@ -14,6 +14,15 @@ class PassportController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
+
+    /**
+     * Create user
+     * @param  Request $request
+     * @param  [string] name
+     * @param  [string] email
+     * @param  [string] password
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -31,7 +40,7 @@ class PassportController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password)
         ]);
- 
+
         $token = $user->createToken('TutsForWeb')->accessToken;
         return response()->json(['token' => $token], 201);
     }
@@ -41,6 +50,15 @@ class PassportController extends Controller
      *
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
+     */
+
+    /**
+     * Login user and create token
+     * 
+     * @param Request $request
+     * @param  [string] email
+     * @param  [string] password
+     * @return [string] access_token
      */
     public function login(Request $request)
     {
@@ -58,8 +76,8 @@ class PassportController extends Controller
     }
  
     /**
-     * Returns Authenticated User Details
-     *
+     * Returns User Details
+     * @param [Authentication] Bearer [token]
      * @return \Illuminate\Http\JsonResponse
      */
     public function details()
