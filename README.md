@@ -55,10 +55,10 @@ $ ./config.sh
 |/api/login              | login route and auth                       | POST         |
 |/api/signup             | register of new user                       | POST         |
 |/api/user               | get informations of user                   | GET          |
-|/api/getmovies          | register of new user                       | GET          |
-|/api/saveFavoriteMovie  | register of new user                       | POST         |
-|/api/listFavoriteMovies | register of new user                       | GET          |
-|/api/deleteFavoriteMovie| register of new user                       | DELETE       |
+|/api/getmovies          | get all movies from API                    | GET          |
+|/api/saveFavoriteMovie  | save a favorite movie                      | POST         |
+|/api/listFavoriteMovies | get favorite movies list from user         | GET          |
+|/api/deleteFavoriteMovie| delete favorite movie from user list       | DELETE       |
 
 [for more datails here the link for Postman docs](https://documenter.getpostman.com/view/1994420/S1TbRu6f?version=latest#cfd298f4-9f6e-ec6b-115f-efb90e7e7466)
 
@@ -100,6 +100,6 @@ Infrastructure
 - [ ] configs pre-commit
 
 ## Useful Links
-[how to doc the code](https://manual.phpdoc.org/HTMLSmartyConverter/HandS/ric_README.html)
+[how to doc the code](https://manual.phpdoc.org/HTMLSmartyConverter/HandS/ric_README.html)  
 [commit pattern used](https://gist.github.com/adeekshith/cd4c95a064977cdc6c50)  
 [nice pattern for emogis](https://gitmoji.carloscuesta.me/?fbclid=IwAR3JhM6m-s7l3XEYPN9vtlZwatGQvxhk8ETzHqbAg5pV5PCH8ajoxzORRQM)  
