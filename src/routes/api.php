@@ -25,4 +25,9 @@ Route::middleware('auth:api')->group(function () {
     Route::get('logout', 'AuthController@logout');
 
     Route::get('listAvailableMovies','MovieController@listAvailableMovies');
+    Route::get('listFavoriteMovies','MovieController@listFavoriteMovies');
+    Route::get('saveFavoriteMovie','MovieController@saveFavoriteMovie');
+    Route::get('deleteFavoriteMovie','MovieController@deleteFavoriteMovie');
+    Route::get('getmovies','MovieController@getMoviesFromApi');
+    
 });
