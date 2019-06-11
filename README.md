@@ -5,14 +5,14 @@
 
 ## Table of Contents
 
-- [Introduction]
-- [Techonology]
-- [Getting Started]
-  - [Running Locally]
-  - [Running Tests]
-- [Avaliable Routes]
-- [All Tasks]
-- [Useful Links]
+- [Introduction](#introduction)
+- [Techonology](#technology)
+- [Getting Started](#getting-started)
+  - [Running Locally](#running-locally)
+  - [Running Tests](#running-tests)
+- [Available Routes](#available-routes)
+- [All Tasks](#tasks)
+- [Useful Links](#useful-links)
 
 
 ## Introduction
@@ -50,7 +50,17 @@ $ ./config.sh
 
 ## Available Routes
 
+| Rotas                  | Descrição                                  | Metodos HTTP |
+|------------------------|--------------------------------------------|--------------|
+|/api/login              | login route and auth                       | POST         |
+|/api/signup             | register of new user                       | POST         |
+|/api/user               | get informations of user                   | GET          |
+|/api/getmovies          | register of new user                       | GET          |
+|/api/saveFavoriteMovie  | register of new user                       | POST         |
+|/api/listFavoriteMovies | register of new user                       | GET          |
+|/api/deleteFavoriteMovie| register of new user                       | DELETE       |
 
+[for more datails here the link for Postman docs](https://documenter.getpostman.com/view/1994420/S1TbRu6f?version=latest#cfd298f4-9f6e-ec6b-115f-efb90e7e7466)
 
 ## All Tasks
 Routes
@@ -58,16 +68,13 @@ Routes
     - [x] sign up
     - [x] login
 - [x] List Movies
-- [ ] List favorite movies of the user
-- [ ] Save a favorite movie
-- [ ] Revome movie from favorite list
-
-Jobs
-- [ ] populate movies table with Task Scheduling of laravel (24h)
+- [x] List favorite movies of the user
+- [x] Save a favorite movie
+- [x] Revome movie from favorite list
 
 Documentation
-- [ ] Link with all routes on postoman
-- [ ] PHP Documentor
+- [x] Link with all routes on postoman
+- [x] PHP Documentor
 
 Tests
 - [ ] Authentication
