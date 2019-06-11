@@ -98,3 +98,8 @@ Infrastructure
 - [ ] Integrate with Coveralls (tool to do covarage tests)
 - [ ] auto deploy on Heroku
 - [ ] configs pre-commit
+
+## Useful Links
+[how to doc the code](https://manual.phpdoc.org/HTMLSmartyConverter/HandS/ric_README.html)
+[commit pattern used](https://gist.github.com/adeekshith/cd4c95a064977cdc6c50)  
+[nice pattern for emogis](https://gitmoji.carloscuesta.me/?fbclid=IwAR3JhM6m-s7l3XEYPN9vtlZwatGQvxhk8ETzHqbAg5pV5PCH8ajoxzORRQM)  
